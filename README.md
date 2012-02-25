@@ -20,17 +20,23 @@ For Windows, this directory is here:
 Contents
 --------
 
+### Syntax Coloring
+
 `Lua.tmLanguage`
 `Lua.JSON-tmLanguage`
 
-These are new language grammar files for syntax highlighting. Compared to the one that ships with Sublime Text, you get the following:
+These files define a language grammar for syntax highlighting lua files. Compared to the one that ships with Sublime Text, you get the following:
 
-- More tokens: Things like function calls and variables are now tagged, so they will show up correctly colored.
-- Better scopes: Most blocks now have some nested scoping support. This means that if you're in an if-block inside a function inside another function, then it knows this. Visually there's no difference, but if you use the expand-scope command then you will find that you'll get far better matches now.
+- *More tokens*: Things like function calls and variables are now tagged, so they will show up correctly colored.
+- *Better scopes*: Most blocks now have some nested scoping support. This means that if you're in an if-block inside a function inside another function, then it knows this. Visually there's no difference, but if you use the expand-scope command then you will find that you'll get far better matches now.
+
+### Build System
 
 `Lua.sublime-build`
 
 This is a build system that runs the current lua file
+
+### Live Parser
 
 `ParseLua.py`
 
