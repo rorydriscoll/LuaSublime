@@ -27,6 +27,14 @@ These files define a language grammar for syntax highlighting lua files. Compare
 - _More tokens_: Things like function calls and variables are now tagged, so they will show up correctly colored.
 - _Better scopes_: Most blocks now have some nested scoping support. This means that if you're in an if-block inside a function inside another function, then it knows this. Visually there's no difference, but if you use the expand-scope command then you will find that you'll get far better matches now.
 
+For comparison, here's the old syntax-highlighting with Monokai Bright
+
+![Old](http://github.com/rorydriscoll/LuaSublime/raw/master/OldHighlighting.png)
+
+And here's the new one
+
+![New](http://github.com/rorydriscoll/LuaSublime/raw/master/NewHighlighting.png)
+
 ### Build System
 
 `Lua.sublime-build`
