@@ -1,10 +1,7 @@
 LuaSublime
 ==========
 
-Description
------------
-
-These are a collection of various different support files useful for developing Lua using Sublime Text 2.
+A collection of various different support files useful for use when programming in Lua using Sublime Text 2.
 
 Installation
 ------------
@@ -27,8 +24,8 @@ Contents
 
 These files define a language grammar for syntax highlighting lua files. Compared to the one that ships with Sublime Text, you get the following:
 
-- *More tokens*: Things like function calls and variables are now tagged, so they will show up correctly colored.
-- *Better scopes*: Most blocks now have some nested scoping support. This means that if you're in an if-block inside a function inside another function, then it knows this. Visually there's no difference, but if you use the expand-scope command then you will find that you'll get far better matches now.
+- _More tokens_: Things like function calls and variables are now tagged, so they will show up correctly colored.
+- _Better scopes_: Most blocks now have some nested scoping support. This means that if you're in an if-block inside a function inside another function, then it knows this. Visually there's no difference, but if you use the expand-scope command then you will find that you'll get far better matches now.
 
 ### Build System
 
