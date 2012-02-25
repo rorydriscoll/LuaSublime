@@ -39,8 +39,8 @@ This is a build system that runs the current lua file
 
 This is a plugin that continually parses the current lua file and highlights any errors by placing a dot in the margin. 
 
-(http://github.com/rorydriscoll/LuaSublime/raw/master/SyntaxError.png)
+![Syntax Error](http://github.com/rorydriscoll/LuaSublime/raw/master/SyntaxError.png)
 
 Lua appears to stop at the first error, so you should only ever see one dot. The error message will be shown in the status bar.
 
-(http://github.com/rorydriscoll/LuaSublime/raw/master/StatusBar.png)
+![Status Bar](http://github.com/rorydriscoll/LuaSublime/raw/master/StatusBar.png)
