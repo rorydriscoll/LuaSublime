@@ -39,13 +39,13 @@ And here's the new one:
 
 `Lua.sublime-build`
 
-This is a build system that runs the current lua file
+This is a simple build system that compiles and runs the current lua file. You can jump between errors using F4.
 
 ### Live Parser
 
 `ParseLua.py`
 
-This is a plugin that continually parses the current lua file and highlights any errors by placing a dot in the margin. 
+This is a small plugin that continually parses the current lua file and highlights any errors by placing a dot in the margin. 
 
 ![Syntax Error](http://github.com/rorydriscoll/LuaSublime/raw/master/SyntaxError.png)
 
