@@ -1,5 +1,5 @@
 {
-    "name": "Lua",
+    "name": "Lua Dev",
     "scopeName": "source.lua",
     "fileTypes": [
         "lua"
@@ -65,7 +65,7 @@
         },
         "linecomment": {
             "name": "comment.line.double-dash.lua",
-            "match": "(--)(?!\\[\\[).*$\\n?",
+            "match": "(--)(?!(\\[=*\\[|\\]=*\\])).*$\n?",
             "captures": {
                 "1": {
                     "name": "punctuation.definition.comment.lua"
@@ -75,13 +75,18 @@
         "blockcomment": {
             "name": "comment.block.lua",
             "begin": "--\\[(=*)\\[",
-            "end": "\\]\\1\\]",
-            "captures": {
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.lua"
+                }
+            },
+            "end": "--\\]\\1\\]",
+            "endCaptures": {
                 "0": {
                     "name": "punctuation.definition.comment.lua"
                 }
             }
-        },        
+        },
         "constant": {
             "name": "constant.language.lua",
             "match": "nil|true|false|_G|_VERSION|\\.\\.\\."
@@ -131,7 +136,7 @@
                     "name": "constant.character.escape.lua"
                 }
             ]
-        },        
+        },
         "function": {
             "name": "meta.function.lua",
             "begin": "\\b(function)(\\s+(((\\w(\\w|\\d)*)\\.)*(\\w(\\w|\\d)*)))?\\s*(\\()((\\.\\.\\.|\\w(\\w|\\d)*)(,\\s*(\\.\\.\\.|\\w(\\w|\\d)*))*)?(\\))",
@@ -165,14 +170,14 @@
                 "1": {
                     "name": "support.function.lua"
                 }
-            },   
+            },
             "end": "\\)",
             "patterns": [
                 {
                     "include": "#general"
                 }
             ]
-        },        
+        },
         "functioncall": {
             "name": "meta.functioncall.lua",
             "begin": "((\\w(\\w|\\d)*[\\.:])*\\w(\\w|\\d)*)\\(",
@@ -227,7 +232,7 @@
                     "include": "#general"
                 }
             ]
-        },        
+        },
         "whileblock": {
             "name": "meta.whileblock.lua",
             "begin": "\\bwhile\\b",
@@ -247,7 +252,7 @@
                     "include": "#general"
                 }
             ]
-        },    
+        },
         "repeatblock": {
             "name": "meta.repeatblock.lua",
             "begin": "\\brepeat\\b",
@@ -267,7 +272,7 @@
                     "include": "#general"
                 }
             ]
-        }, 
+        },
         "tabledecl":{
             "name": "meta.tabledecl.lua",
             "begin": "{",
@@ -306,5 +311,5 @@
             "include": "#general"
         }
     ],
-    "uuid": "29fa8a60-20f1-4d96-866d-04cfd323c801"
+    "uuid": "d3691eb0-1e00-4893-90fc-1a78c6c100b0"
 }
