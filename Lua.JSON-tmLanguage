@@ -83,7 +83,7 @@
                     "name": "punctuation.definition.comment.lua"
                 }
             },
-            "end": "--\\]\\1\\]",
+            "end": "\\]\\1\\]",
             "endCaptures": {
                 "0": {
                     "name": "punctuation.definition.comment.lua"
