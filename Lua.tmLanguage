@@ -227,6 +227,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#multilinestring</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#function</string>
 				</dict>
 				<dict>
@@ -353,6 +357,31 @@
 ?</string>
 			<key>name</key>
 			<string>comment.line.double-dash.lua</string>
+		</dict>
+		<key>multilinestring</key>
+		<dict>
+			<key>begin</key>
+			<string>\[\[</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.lua</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\]\]</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.lua</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.block.lua</string>
 		</dict>
 		<key>number</key>
 		<dict>

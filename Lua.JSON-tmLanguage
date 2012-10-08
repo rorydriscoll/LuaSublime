@@ -26,6 +26,9 @@
                     "include": "#doublequotestring"
                 },
                 {
+                    "include": "#multilinestring"
+                },
+                {
                     "include": "#function"
                 },
                 {
@@ -136,6 +139,21 @@
                     "name": "constant.character.escape.lua"
                 }
             ]
+        },
+        "multilinestring": {
+            "name": "string.quoted.block.lua",
+            "begin": "\\[\\[",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.lua"
+                }
+            },
+            "end": "\\]\\]",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.lua"
+                }
+            }
         },
         "function": {
             "name": "meta.function.lua",
