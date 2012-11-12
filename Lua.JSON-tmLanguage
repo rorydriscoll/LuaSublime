@@ -60,9 +60,6 @@
                 },
                 {
                     "include": "#keyword"
-                },
-                {
-                    "include": "#variable"
                 }
             ]
         },
@@ -157,7 +154,7 @@
         },
         "function": {
             "name": "meta.function.lua",
-            "begin": "\\b(function)(\\s+(((\\w(\\w|\\d)*)\\.)*(\\w(\\w|\\d)*)))?\\s*(\\()((\\.\\.\\.|\\w(\\w|\\d)*)(,\\s*(\\.\\.\\.|\\w(\\w|\\d)*))*)?(\\))",
+            "begin": "\\b(function)(\\s+(((\\w(\\w|\\d)*)(\\.|:))*(\\w(\\w|\\d)*)))?\\s*(\\()((\\.\\.\\.|\\w(\\w|\\d)*)(,\\s*(\\.\\.\\.|\\w(\\w|\\d)*))*)?(\\))",
             "beginCaptures": {
                 "1": {
                     "name": "keyword.control.lua"
@@ -165,7 +162,7 @@
                 "3": {
                     "name": "entity.name.function.lua"
                 },
-                "10": {
+                "11": {
                     "name": "variable.parameter.function.lua"
                 }
             },
@@ -199,11 +196,6 @@
         "functioncall": {
             "name": "meta.functioncall.lua",
             "begin": "((\\w(\\w|\\d)*[\\.:])*\\w(\\w|\\d)*)\\(",
-            "beginCaptures": {
-                "1": {
-                    "name": "entity.name.function.lua"
-                }
-            },
             "end": "\\)",
             "patterns": [
                 {
@@ -318,10 +310,6 @@
         "keyword": {
             "name": "keyword.control.lua",
             "match": "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|local|in)\\b"
-        },
-        "variable": {
-            "name": "variable.other.lua",
-            "match": "([A-Za-z_][A-Za-z0-9_\\.]*)"
         }
     },
     "patterns": [

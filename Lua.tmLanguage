@@ -134,7 +134,7 @@
 		<key>function</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(function)(\s+(((\w(\w|\d)*)\.)*(\w(\w|\d)*)))?\s*(\()((\.\.\.|\w(\w|\d)*)(,\s*(\.\.\.|\w(\w|\d)*))*)?(\))</string>
+			<string>\b(function)(\s+(((\w(\w|\d)*)(\.|:))*(\w(\w|\d)*)))?\s*(\()((\.\.\.|\w(\w|\d)*)(,\s*(\.\.\.|\w(\w|\d)*))*)?(\))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -142,7 +142,7 @@
 					<key>name</key>
 					<string>keyword.control.lua</string>
 				</dict>
-				<key>10</key>
+				<key>11</key>
 				<dict>
 					<key>name</key>
 					<string>variable.parameter.function.lua</string>
@@ -177,14 +177,6 @@
 		<dict>
 			<key>begin</key>
 			<string>((\w(\w|\d)*[\.:])*\w(\w|\d)*)\(</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.lua</string>
-				</dict>
-			</dict>
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
@@ -272,10 +264,6 @@
 				<dict>
 					<key>include</key>
 					<string>#keyword</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#variable</string>
 				</dict>
 			</array>
 		</dict>
@@ -478,13 +466,6 @@
 					<string>#general</string>
 				</dict>
 			</array>
-		</dict>
-		<key>variable</key>
-		<dict>
-			<key>match</key>
-			<string>([A-Za-z_][A-Za-z0-9_\.]*)</string>
-			<key>name</key>
-			<string>variable.other.lua</string>
 		</dict>
 		<key>whileblock</key>
 		<dict>
