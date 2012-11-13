@@ -60,6 +60,9 @@
                 },
                 {
                     "include": "#keyword"
+                },
+                {
+                    "include": "#variable"
                 }
             ]
         },
@@ -310,6 +313,11 @@
         "keyword": {
             "name": "keyword.control.lua",
             "match": "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|local|in)\\b"
+
+        },
+        "variable": {
+            "name": "variable.other.lua",
+            "match": "([A-Za-z_][A-Za-z0-9_\\.]*)"
         }
     },
     "patterns": [

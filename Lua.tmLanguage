@@ -265,6 +265,10 @@
 					<key>include</key>
 					<string>#keyword</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
 			</array>
 		</dict>
 		<key>ifblock</key>
@@ -466,6 +470,13 @@
 					<string>#general</string>
 				</dict>
 			</array>
+		</dict>
+		<key>variable</key>
+		<dict>
+			<key>match</key>
+			<string>([A-Za-z_][A-Za-z0-9_\.]*)</string>
+			<key>name</key>
+			<string>variable.other.lua</string>
 		</dict>
 		<key>whileblock</key>
 		<dict>
