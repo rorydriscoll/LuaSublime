@@ -26,8 +26,10 @@ class ParseLuaCommand(sublime_plugin.EventListener):
 		self.pending = self.pending - 1
 		if self.pending > 0:
 			return
+		# Grab the path to luac from the settings
+		luac_path = s.get("luac_path")
 		# Run luac with the parse option
-		p = Popen('luac -p -', stdin=PIPE, stderr=PIPE, shell=True)
+		p = Popen(luac_path + ' -p -', stdin=PIPE, stderr=PIPE, shell=True)
 		text = view.substr(sublime.Region(0, view.size()))
 		errors = p.communicate(text)[1]
 		result = p.wait()

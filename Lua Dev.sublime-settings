@@ -1,3 +1,4 @@
 {
-    "live_parser" : true
+    "live_parser" : true,
+    "luac_path": "luac"
 }
