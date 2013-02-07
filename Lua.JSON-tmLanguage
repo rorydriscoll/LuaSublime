@@ -153,7 +153,13 @@
                 "0": {
                     "name": "punctuation.definition.string.end.lua"
                 }
-            }
+            },
+            "patterns": [
+                {
+                    "match": "\\\\.",
+                    "name": "constant.character.escape.lua"
+                }
+            ]
         },
         "function": {
             "name": "meta.function.lua",
