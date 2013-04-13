@@ -134,7 +134,7 @@
 		<key>function</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(function)(\s+(((\w(\w|\d)*)(\.|:))*(\w(\w|\d)*)))?\s*(\()((\.\.\.|\w(\w|\d)*)(,\s*(\.\.\.|\w(\w|\d)*))*)?(\))</string>
+			<string>\b(function)(\s+(((\w(\w|\d)*)(\.|:))*(\w(\w|\d)*)))?\s*(\()\s*((\.\.\.|\w(\w|\d)*)(,\s*(\.\.\.|\w(\w|\d)*))*)?\s*(\))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
