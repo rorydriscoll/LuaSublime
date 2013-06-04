@@ -31,7 +31,7 @@ class ParseLuaCommand(sublime_plugin.EventListener):
 		# Run luac with the parse option
 		p = Popen(luac_path + ' -p -', stdin=PIPE, stderr=PIPE, shell=True)
 		text = view.substr(sublime.Region(0, view.size()))
-		errors = p.communicate(text)[1]
+		errors = p.communicate(text.encode('utf-8'))[1]
 		result = p.wait()
 		# Clear out any old region markers
 		view.erase_regions('lua')
