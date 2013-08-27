@@ -3,7 +3,6 @@ import sublime_plugin
 import re
 from subprocess import Popen, PIPE
 
-s = sublime.load_settings("Lua Dev.sublime-settings")
 
 class ParseLuaCommand(sublime_plugin.EventListener):
 
@@ -13,7 +12,8 @@ class ParseLuaCommand(sublime_plugin.EventListener):
 		self.pending = 0
 
 	def on_modified(self, view):
-		if not s.get("live_parser"):
+		self.settings = sublime.load_settings("Lua Dev.sublime-settings")
+		if not self.settings.get("live_parser"):
 			return
 		filename = view.file_name()
 		if not filename or not filename.endswith('.lua'):
@@ -27,7 +27,7 @@ class ParseLuaCommand(sublime_plugin.EventListener):
 		if self.pending > 0:
 			return
 		# Grab the path to luac from the settings
-		luac_path = s.get("luac_path")
+		luac_path = self.settings.get("luac_path")
 		# Run luac with the parse option
 		p = Popen(luac_path + ' -p -', stdin=PIPE, stderr=PIPE, shell=True)
 		text = view.substr(sublime.Region(0, view.size()))
@@ -39,6 +39,7 @@ class ParseLuaCommand(sublime_plugin.EventListener):
 		if result == 0:
 			return
 		# Add regions and place the error message in the status bar
+		errors = errors.decode("utf-8")
 		sublime.status_message(errors)
 		pattern = re.compile(r':([0-9]+):')
 		regions = [view.full_line(view.text_point(int(match) - 1, 0)) for match in pattern.findall(errors)]
