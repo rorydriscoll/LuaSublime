@@ -114,7 +114,7 @@
             },
             "patterns": [
                 {
-                    "match": "\\\\.",
+                    "match": "\\\\(\\d{1,3}|.)",
                     "name": "constant.character.escape.lua"
                 }
             ]
@@ -135,7 +135,7 @@
             },
             "patterns": [
                 {
-                    "match": "\\\\.",
+                    "match": "\\\\(\\d{1,3}|.)",
                     "name": "constant.character.escape.lua"
                 }
             ]
@@ -153,17 +153,11 @@
                 "0": {
                     "name": "punctuation.definition.string.end.lua"
                 }
-            },
-            "patterns": [
-                {
-                    "match": "\\\\.",
-                    "name": "constant.character.escape.lua"
-                }
-            ]
+            }
         },
         "function": {
             "name": "meta.function.lua",
-            "begin": "\\b(function)(\\s+(((\\w(\\w|\\d)*)(\\.|:))*(\\w(\\w|\\d)*)))?\\s*(\\()((\\.\\.\\.|\\w(\\w|\\d)*)(,\\s*(\\.\\.\\.|\\w(\\w|\\d)*))*)?(\\))",
+            "begin": "\\b(function)(\\s+(((\\w(\\w|\\d)*)(\\.|:))*(\\w(\\w|\\d)*)))?\\s*(\\()\\s*((\\.\\.\\.|\\w(\\w|\\d)*)(,\\s*(\\.\\.\\.|\\w(\\w|\\d)*))*)?\\s*(\\))",
             "beginCaptures": {
                 "1": {
                     "name": "keyword.control.lua"
