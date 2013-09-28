@@ -374,15 +374,6 @@
 			</dict>
 			<key>name</key>
 			<string>string.quoted.block.lua</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\.</string>
-					<key>name</key>
-					<string>constant.character.escape.lua</string>
-				</dict>
-			</array>
 		</dict>
 		<key>number</key>
 		<dict>
