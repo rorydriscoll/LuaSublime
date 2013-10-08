@@ -169,7 +169,7 @@
                     "name": "variable.parameter.function.lua"
                 }
             },
-            "end": "end",
+            "end": "\\bend\\b",
             "endCaptures": {
                 "0": {
                     "name": "keyword.control.lua"
