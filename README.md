@@ -29,11 +29,11 @@ These files define a language grammar for syntax highlighting lua files. Compare
 
 For comparison, here's how the old syntax-highlighting looks with the Twilight color scheme:
 
-![Old](http://github.com/rorydriscoll/LuaSublime/raw/master/OldHighlighting.png)
+![Old](https://github.com/rorydriscoll/LuaSublime/raw/master/OldHighlighting.png)
 
 And here's the new one:
 
-![New](http://github.com/rorydriscoll/LuaSublime/raw/master/NewHighlighting.png)
+![New](https://github.com/rorydriscoll/LuaSublime/raw/master/NewHighlighting.png)
 
 ### Build System
 
@@ -47,8 +47,8 @@ This is a simple build system that compiles and runs the current lua file. You c
 
 This is a small plugin that continually parses the current lua file and highlights any errors by placing a dot in the margin. 
 
-![Syntax Error](http://github.com/rorydriscoll/LuaSublime/raw/master/SyntaxError.png)
+![Syntax Error](https://github.com/rorydriscoll/LuaSublime/raw/master/SyntaxError.png)
 
 Lua appears to stop at the first error, so you should only ever see one dot. The error message will be shown in the status bar.
 
-![Status Bar](http://github.com/rorydriscoll/LuaSublime/raw/master/StatusBar.png)
+![Status Bar](https://github.com/rorydriscoll/LuaSublime/raw/master/StatusBar.png)
