@@ -32,6 +32,9 @@
                     "include": "#function"
                 },
                 {
+                    "include": "#libfunctioncall"
+                },
+                {
                     "include": "#functioncall"
                 },
                 {
